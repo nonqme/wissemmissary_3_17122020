@@ -1,0 +1,226 @@
+body {
+    margin: 0.5rem 0 0 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+$background:#eaeaea;
+$lightbackground: #f6f6f6;
+$primarycolor: #9356DC;
+$secondarycolor: #FF79DA;
+$tertiary: #99E2D0;
+
+@mixin maxwidth {
+    margin: auto;
+    max-width: 1440px;
+}
+
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+@mixin flexcentercolumn {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin flexstart {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin titrepadding {
+    text-align: center;
+    margin:2rem 4rem 0 4rem;
+}
+
+header {
+    @include maxwidth();
+    display: flex;
+    align-items: center;
+}
+
+.arrowiconhide {
+    display: none;
+}
+
+.arrowicon {
+    position: absolute;
+    margin: 1rem;
+}
+
+.logo {
+    margin: auto;
+    padding: 1rem;
+}
+
+.localization {
+    @include maxwidth();
+    @include flexcenter();
+    background: $background;
+    box-shadow:inset 0px 5px 9px -6px gray;
+    &__icon {
+        margin: 1rem;
+    }
+}
+
+.section1 {
+    background: $lightbackground;
+    @include maxwidth();
+    @include flexcentercolumn();
+    h1{
+        @include titrepadding();
+        font-weight: bold;
+    }
+    p{
+        text-align: center;
+        margin: 1rem 2rem ;
+    }
+    &__btn{
+        border-radius: 5rem;
+        border: none;
+        background: linear-gradient(174deg, $secondarycolor 10%, $primarycolor 100%);
+        padding: 1rem 1.5rem;
+        color: white;
+        margin: 0.5rem 1rem 2rem 1rem;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+h2 {
+    margin: 2rem 1rem 0 1rem;
+}
+
+.aside {
+    @include maxwidth();
+    padding: 1rem 0 1rem 0;
+    &__list {
+        padding: 0;
+        list-style: none;
+        counter-reset: circle-counter;
+        &--style {
+            counter-increment: circle-counter;
+            background-color: $lightbackground;
+            border-radius: 1.3rem;
+            margin: 1rem;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            box-shadow: 0px 5px 9px -6px gray;
+            &:before {
+                content: counter(circle-counter);
+                background-color: $primarycolor;
+                border-radius: 50%;
+                padding: .5rem .7rem;
+                margin: 0 0 0 -0.75rem;
+                color: white;
+                font-size: .7rem;
+            }
+        }
+        &__txticon {
+            display: flex;
+        }
+        &__icon {
+            margin: 0 1.5rem 0 1.5rem;
+            font-size: 1.3rem;
+            color: gray;
+        }
+        &__text {
+            font-weight: bold;
+        }
+    }
+}
+
+.section2 {
+    @include maxwidth();
+    padding: 1rem 0 1rem 0;
+    background: $lightbackground;
+    &__vignette {
+        display: flex;
+        flex-direction: column;
+        border-radius: 1rem;
+        box-shadow: 0 0 16px gray;
+        max-height: 100%;
+        cursor: pointer;
+        margin: 1rem;
+        &__img {
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            width: 100%;
+            height: 10rem;
+            object-fit: cover;
+        }  
+        &__txticon {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            margin: 1rem;
+        }
+        &__txt {
+            flex-basis: 90%;
+            h3 {
+                margin: 0;
+            }
+            p {
+                margin: 0;
+            }   
+        }
+    }
+}
+
+footer {
+    background: #696969;
+    color: white;
+    h4 {
+        margin: 0 1rem 0 1rem;
+    }
+    ul {
+        margin: 0;
+    }
+}
+
+/* PAGE MENU */
+
+.main {
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        max-height: 20rem;
+    }
+    &__titleandicon {
+        font-family: 'Shrikhand', cursive;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1 {
+            margin: 1rem;
+            font-weight: normal;
+        }
+        &__icon {
+            margin: 1rem;
+        }
+    }
+
+}
+
+.order {
+    &__btn{
+        border-radius: 5rem;
+        border: none;
+        background: linear-gradient(174deg, $secondarycolor 10%, $primarycolor 100%);
+        padding: 1rem 1.5rem;
+        color: white;
+        margin: 0.5rem 1rem 2rem 1rem;
+    }
+}
+
+
+
+
+
