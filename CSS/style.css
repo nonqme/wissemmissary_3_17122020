@@ -24,9 +24,12 @@ header {
   padding: 1rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 .localization {
   margin: auto;
-  max-width: 1440px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,10 +43,12 @@ header {
 .section1 {
   background: #f6f6f6;
   margin: auto;
-  max-width: 1440px;
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+.section1 a {
+  color: white;
 }
 .section1 h1 {
   text-align: center;
@@ -75,8 +80,12 @@ h2 {
   max-width: 1440px;
   padding: 1rem 0 1rem 0;
 }
+.aside a {
+  color: black;
+}
 .aside__list {
   padding: 0;
+  margin: 0 1rem 0 1rem;
   list-style: none;
   counter-reset: circle-counter;
 }
@@ -99,6 +108,12 @@ h2 {
   color: white;
   font-size: 0.7rem;
 }
+.aside__list--style a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
 .aside__list__txticon {
   display: flex;
 }
@@ -112,10 +127,15 @@ h2 {
 }
 
 .section2 {
-  margin: auto;
-  max-width: 1440px;
   padding: 1rem 0 1rem 0;
   background: #f6f6f6;
+}
+.section2 a {
+  color: black;
+}
+.section2__content {
+  margin: auto;
+  max-width: 1440px;
 }
 .section2__vignette {
   display: flex;
@@ -150,15 +170,37 @@ h2 {
   margin: 0;
 }
 
-footer {
+.footer {
   background: #696969;
   color: white;
 }
-footer h4 {
-  margin: 0 1rem 0 1rem;
+.footer__content {
+  margin: auto;
+  max-width: 1440px;
+  padding: 2rem 0 2rem 1rem;
 }
-footer ul {
+.footer h4 {
+  margin: 0 0 2rem 0;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+.footer ul {
+  padding: 0;
+  list-style: none;
   margin: 0;
+}
+.footer li {
+  margin: 1rem 0;
+}
+.footer__texticon__icon {
+  margin: 0 0.5rem 0 0;
+}
+.footer__texticon__txt {
+  margin: 0;
+}
+.footer a {
+  color: white;
 }
 
 /* PAGE MENU */

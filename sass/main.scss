@@ -26,12 +26,6 @@ $tertiary: #99E2D0;
     flex-direction: column;
 }
 
-@mixin flexstart {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
 @mixin titrepadding {
     text-align: center;
     margin:2rem 4rem 0 4rem;
@@ -57,8 +51,13 @@ header {
     padding: 1rem;
 }
 
+a {
+    text-decoration: none;
+}
+
+
 .localization {
-    @include maxwidth();
+    margin: auto;
     @include flexcenter();
     background: $background;
     box-shadow:inset 0px 5px 9px -6px gray;
@@ -69,8 +68,11 @@ header {
 
 .section1 {
     background: $lightbackground;
-    @include maxwidth();
+    margin: auto;
     @include flexcentercolumn();
+    a {
+        color: white;
+    }
     h1{
         @include titrepadding();
         font-weight: bold;
@@ -99,8 +101,12 @@ h2 {
 .aside {
     @include maxwidth();
     padding: 1rem 0 1rem 0;
+    a {
+        color: black;
+    }
     &__list {
         padding: 0;
+        margin:0 1rem 0 1rem;
         list-style: none;
         counter-reset: circle-counter;
         &--style {
@@ -121,6 +127,13 @@ h2 {
                 color: white;
                 font-size: .7rem;
             }
+            a {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                
+            }
         }
         &__txticon {
             display: flex;
@@ -137,9 +150,14 @@ h2 {
 }
 
 .section2 {
-    @include maxwidth();
     padding: 1rem 0 1rem 0;
     background: $lightbackground;
+    a {
+        color: black;
+    }
+    &__content {
+        @include maxwidth();
+    }
     &__vignette {
         display: flex;
         flex-direction: column;
@@ -174,14 +192,35 @@ h2 {
     }
 }
 
-footer {
+.footer {
     background: #696969;
     color: white;
+    &__content {
+        @include maxwidth();
+        padding: 2rem 0 2rem 1rem;
+    }
     h4 {
-        margin: 0 1rem 0 1rem;
+        margin: 0 0 2rem 0;
+        font-family: 'Shrikhand', cursive;
+        font-size:1.3rem;
+        font-weight: 100;
     }
     ul {
+        padding: 0;
+        list-style: none;
         margin: 0;
+    }
+    li {
+        margin: 1rem 0;
+    }
+    &__texticon__icon {
+        margin: 0 0.5rem 0 0;
+    }
+    &__texticon__txt {
+        margin: 0;
+    }
+    a {
+        color: white;
     }
 }
 
