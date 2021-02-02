@@ -28,6 +28,59 @@ a {
   text-decoration: none;
 }
 
+.loader {
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #eaeaea;
+  opacity: 0%;
+  animation: animatedbackground 3s linear;
+}
+.loader__gradient {
+  padding: 0.5rem;
+  font-size: 3rem;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(120deg, #FF79DA, #9356DC);
+  background-size: 300rem;
+  background-position: right;
+  animation: animatedtxt 3s linear;
+  opacity: 0%;
+}
+
+@keyframes animatedtxt {
+  0% {
+    opacity: 100%;
+    background-position: right;
+  }
+  99% {
+    opacity: 100%;
+  }
+  100% {
+    background-position: left;
+    opacity: 0;
+  }
+}
+@keyframes animatedbackground {
+  0% {
+    opacity: 100%;
+    background: #eaeaea;
+  }
+  99% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+    background: #f6f6f6;
+  }
+}
 .localization {
   margin: auto;
   display: flex;
