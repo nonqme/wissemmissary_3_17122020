@@ -75,8 +75,8 @@ a {
         color: transparent;
         -webkit-background-clip: text;
         background-image: linear-gradient(to right, $secondarycolor,$primarycolor, $secondarycolor);
-        background-size: 100vh;
-        animation: animatedtxt 3s ;
+        background-size: 400%;
+        animation: animatedtxt 3s linear;
         opacity: 0%;
     }
 }

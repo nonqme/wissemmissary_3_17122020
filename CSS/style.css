@@ -49,8 +49,8 @@ a {
   color: transparent;
   -webkit-background-clip: text;
   background-image: linear-gradient(to right, #FF79DA, #9356DC, #FF79DA);
-  background-size: 100vh;
-  animation: animatedtxt 3s;
+  background-size: 400%;
+  animation: animatedtxt 3s linear;
   opacity: 0%;
 }
 
