@@ -3,6 +3,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.index {
+  animation: textnoscroll 3s linear;
+}
+
 header {
   margin: auto;
   max-width: 1440px;
@@ -42,15 +46,18 @@ a {
   background: #eaeaea;
   opacity: 0%;
   animation: animatedbackground 3s linear;
+  z-index: -10;
 }
 .loader__gradient {
   padding: 0.5rem;
   font-size: 3rem;
   color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
   background-image: linear-gradient(to right, #FF79DA, #9356DC, #FF79DA);
-  background-size: 400%;
+  background-size: 300%;
   animation: animatedtxt 3s linear;
+  animation-direction: alternate;
   opacity: 0%;
 }
 
@@ -58,29 +65,50 @@ a {
   0% {
     opacity: 100%;
     background-position: right;
+    z-index: 15;
   }
-  50% {
-    background-position: center;
-  }
-  70% {
+  90% {
     opacity: 100%;
+    z-index: 15;
   }
   100% {
     background-position: left;
     opacity: 0%;
+    z-index: 15;
   }
 }
 @keyframes animatedbackground {
   0% {
     opacity: 100%;
     background: #eaeaea;
+    z-index: 15;
   }
-  70% {
+  90% {
     opacity: 100%;
   }
   100% {
     opacity: 0%;
     background: #f6f6f6;
+    z-index: 15;
+  }
+}
+@keyframes animatedheart {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+@keyframes textnoscroll {
+  0% {
+    overflow: hidden;
+  }
+  99% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
   }
 }
 .localization {
@@ -121,9 +149,14 @@ a {
   padding: 1rem 1.5rem;
   color: white;
   margin: 0.5rem 1rem 2rem 1rem;
+  box-shadow: 0px 5px 9px -6px gray;
 }
 .section1__btn:focus {
   outline: none;
+}
+.section1__btn:hover {
+  background: linear-gradient(174deg, #ffa2e5 10%, #a978e3 100%);
+  box-shadow: 0px 5px 5px -2px gray;
 }
 
 h2 {
@@ -154,6 +187,9 @@ h2 {
   align-items: center;
   box-shadow: 0px 5px 9px -6px gray;
 }
+.aside__list--style:hover {
+  background-color: #ffdff6;
+}
 .aside__list--style:before {
   content: counter(circle-counter);
   background-color: #9356DC;
@@ -171,6 +207,12 @@ h2 {
 }
 .aside__list__txticon {
   display: flex;
+  align-items: center;
+  flex-basis: 100%;
+  height: 100%;
+}
+.aside__list__txticon:hover > .aside__list__icon {
+  color: #9356DC;
 }
 .aside__list__icon {
   margin: 0 1.5rem 0 1.5rem;
@@ -193,6 +235,7 @@ h2 {
   max-width: 1440px;
 }
 .section2__vignette {
+  position: relative;
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
@@ -200,6 +243,14 @@ h2 {
   max-height: 100%;
   cursor: pointer;
   margin: 1rem;
+}
+.section2__vignette__new {
+  position: absolute;
+  right: 0.75rem;
+  top: 1rem;
+  box-sizing: border-box;
+  background-color: #99e2d0;
+  padding: 0.5rem;
 }
 .section2__vignette__img {
   border-top-left-radius: 1rem;
@@ -215,6 +266,9 @@ h2 {
   align-content: center;
   margin: 1rem;
 }
+.section2__vignette__txtcontent {
+  flex-basis: 80%;
+}
 .section2__vignette__txt {
   flex-basis: 90%;
 }
@@ -223,6 +277,30 @@ h2 {
 }
 .section2__vignette__txt p {
   margin: 0;
+}
+.section2__vignette__iconblock {
+  flex-basis: 20%;
+  display: flex;
+  justify-content: flex-end;
+}
+.section2__vignette__iconblock:hover > .section2__vignette__iconblock__icon {
+  opacity: 0%;
+}
+.section2__vignette__iconblock:hover > .section2__vignette__iconblock__iconfull {
+  opacity: 100%;
+  animation: animatedheart 0.5s linear;
+}
+.section2__vignette__iconblock__icon {
+  position: absolute;
+}
+.section2__vignette__iconblock__iconfull {
+  position: relative;
+  background-image: linear-gradient(to right, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 500%;
+  opacity: 0%;
 }
 
 .footer {
@@ -247,6 +325,7 @@ h2 {
 }
 .footer li {
   margin: 1rem 0;
+  display: flex;
 }
 .footer__texticon__icon {
   margin: 0 0.5rem 0 0;
