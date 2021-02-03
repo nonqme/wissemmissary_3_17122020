@@ -279,7 +279,6 @@ h2 {
   margin: 0;
 }
 .section2__vignette__iconblock {
-  flex-basis: 20%;
   display: flex;
   justify-content: flex-end;
 }
@@ -292,6 +291,8 @@ h2 {
 }
 .section2__vignette__iconblock__icon {
   position: absolute;
+  font-size: 1.5rem;
+  font-weight: solid;
 }
 .section2__vignette__iconblock__iconfull {
   position: relative;
@@ -301,6 +302,7 @@ h2 {
   color: transparent;
   background-size: 500%;
   opacity: 0%;
+  font-size: 1.5rem;
 }
 
 .footer {
@@ -368,7 +370,7 @@ h2 {
   font-family: "Shrikhand", cursive;
 }
 .main__content__titleandicon__iconblock {
-  margin: 1rem;
+  margin-right: 2rem;
 }
 .main__content__titleandicon__iconblock:hover > .main__content__titleandicon__icon {
   opacity: 0%;
