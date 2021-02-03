@@ -380,13 +380,13 @@ h2 {
         }
     }
     &__content {
-        @include maxwidth();
         background-color: $lightbackground;
         position: relative;
         border-top-left-radius: 2rem;
         border-top-right-radius: 2rem;
         margin-top: -5rem;
         &__titleandicon {
+            @include maxwidth();
             display: flex;
             justify-content: space-between;
             align-items: center;

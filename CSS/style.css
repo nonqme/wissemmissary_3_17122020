@@ -347,8 +347,6 @@ h2 {
   max-height: 20rem;
 }
 .main__content {
-  margin: auto;
-  max-width: 1440px;
   background-color: #f6f6f6;
   position: relative;
   border-top-left-radius: 2rem;
@@ -356,6 +354,8 @@ h2 {
   margin-top: -5rem;
 }
 .main__content__titleandicon {
+  margin: auto;
+  max-width: 1440px;
   display: flex;
   justify-content: space-between;
   align-items: center;
