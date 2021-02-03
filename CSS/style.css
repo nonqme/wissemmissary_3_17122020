@@ -338,32 +338,112 @@ h2 {
 }
 
 /* PAGE MENU */
-.main__img {
+.main__imgblock {
+  z-index: -100;
+}
+.main__imgblock__img {
   width: 100%;
   object-fit: cover;
   max-height: 20rem;
 }
-.main__titleandicon {
-  font-family: "Shrikhand", cursive;
+.main__content {
+  margin: auto;
+  max-width: 1440px;
+  background-color: #f6f6f6;
+  position: relative;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  margin-top: -5rem;
+}
+.main__content__titleandicon {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.8rem;
 }
-.main__titleandicon h1 {
+.main__content__titleandicon h1 {
   margin: 1rem;
   font-weight: normal;
+  font-size: 1.7rem;
+  font-family: "Shrikhand", cursive;
 }
-.main__titleandicon__icon {
+.main__content__titleandicon__iconblock {
   margin: 1rem;
 }
+.main__content__titleandicon__iconblock:hover > .main__content__titleandicon__icon {
+  opacity: 0%;
+}
+.main__content__titleandicon__iconblock:hover > .main__content__titleandicon__iconfull {
+  opacity: 100%;
+  animation: animatedheart 0.5s linear;
+}
+.main__content__titleandicon__icon {
+  position: absolute;
+  margin-top: 3px;
+}
+.main__content__titleandicon__iconfull {
+  position: relative;
+  background-image: linear-gradient(to right, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 500%;
+  opacity: 0%;
+}
 
+.section {
+  margin: auto;
+  max-width: 1440px;
+}
+.section h2 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin: 2rem 1rem 0 1rem;
+}
+.section .vignette {
+  background-color: white;
+  border-radius: 0.8rem;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.section .vignette .textmenu {
+  min-width: 0;
+}
+.section .vignette .textmenu h3 {
+  margin: 0.5rem 0 0.5rem 1rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.section .vignette .textmenu p {
+  margin: 0 0 0.5rem 1rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.section .vignette .pricemenu {
+  align-self: flex-end;
+}
+.section .vignette .pricemenu p {
+  margin: 0 1rem 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
 .order__btn {
   border-radius: 5rem;
   border: none;
   background: linear-gradient(174deg, #FF79DA 10%, #9356DC 100%);
   padding: 1rem 1.5rem;
   color: white;
-  margin: 0.5rem 1rem 2rem 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
