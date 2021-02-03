@@ -22,6 +22,9 @@ header {
   position: absolute;
   margin: 1rem;
 }
+.arrowicon i {
+  color: black;
+}
 
 .logo {
   margin: auto;
