@@ -150,6 +150,16 @@ a {
     }
 }
 
+@keyframes validationhover {
+    to{
+        transform: translateX(-5rem);
+    }
+}
+@keyframes validationhoverrotate {
+    to{
+        transform: rotate(0deg);
+    }
+}
 
 .localization {
     margin: auto;
@@ -429,7 +439,7 @@ h2 {
     }
 }
 
-.section {
+.sectionmenu {
     @include maxwidth();
     h2 {
         font-size: 1.1rem;
@@ -441,9 +451,25 @@ h2 {
         border-radius: 0.8rem;
         margin: 1rem;
         display: flex;
-        justify-content: space-between;
+        overflow: hidden;
+        &:hover > .validation{
+            animation: linear 0.5s validationhover;
+            animation-fill-mode: forwards;
+        }
+
+        &:hover > .pricemenu{
+            animation: linear 0.5s validationhover;
+            animation-fill-mode: forwards;
+        }
+
+        &:hover .style{
+            animation: linear 0.5s validationhoverrotate;
+            animation-fill-mode: forwards;
+        }
         .textmenu {
             min-width: 0;
+            flex: 1;
+            border: 1px solid red;
             h3{
                 margin: 0.5rem 0 0.5rem 1rem;
                 font-size: 1rem;
@@ -461,10 +487,28 @@ h2 {
             }
         }
         .pricemenu {
-            align-self: flex-end;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            margin-right: 1rem;
+            border: 1px solid red;
             p {
-                margin: 0 1rem 0.5rem 1rem;
+                margin: 0 1rem 0.5rem 0;
                 font-weight: bold;
+            }
+        }
+        .validation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            background: $tertiary;
+            color: white;
+            margin-right: -5rem;
+            border: 1px solid red;
+            .style {
+                transform: rotate(180deg);
+                font-size: 1.6rem;
             }
         }
     }

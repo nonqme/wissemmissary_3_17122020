@@ -114,6 +114,16 @@ a {
     overflow: visible;
   }
 }
+@keyframes validationhover {
+  to {
+    transform: translateX(-5rem);
+  }
+}
+@keyframes validationhoverrotate {
+  to {
+    transform: rotate(0deg);
+  }
+}
 .localization {
   margin: auto;
   display: flex;
@@ -395,33 +405,47 @@ h2 {
   opacity: 0%;
 }
 
-.section {
+.sectionmenu {
   margin: auto;
   max-width: 1440px;
 }
-.section h2 {
+.sectionmenu h2 {
   font-size: 1.1rem;
   font-weight: normal;
   margin: 2rem 1rem 0 1rem;
 }
-.section .vignette {
+.sectionmenu .vignette {
   background-color: white;
   border-radius: 0.8rem;
   margin: 1rem;
   display: flex;
-  justify-content: space-between;
+  overflow: hidden;
 }
-.section .vignette .textmenu {
+.sectionmenu .vignette:hover > .validation {
+  animation: linear 0.5s validationhover;
+  animation-fill-mode: forwards;
+}
+.sectionmenu .vignette:hover > .pricemenu {
+  animation: linear 0.5s validationhover;
+  animation-fill-mode: forwards;
+}
+.sectionmenu .vignette:hover .style {
+  animation: linear 0.5s validationhoverrotate;
+  animation-fill-mode: forwards;
+}
+.sectionmenu .vignette .textmenu {
   min-width: 0;
+  flex: 1;
+  border: 1px solid red;
 }
-.section .vignette .textmenu h3 {
+.sectionmenu .vignette .textmenu h3 {
   margin: 0.5rem 0 0.5rem 1rem;
   font-size: 1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.section .vignette .textmenu p {
+.sectionmenu .vignette .textmenu p {
   margin: 0 0 0.5rem 1rem;
   font-weight: 400;
   font-size: 0.9rem;
@@ -429,12 +453,30 @@ h2 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.section .vignette .pricemenu {
-  align-self: flex-end;
+.sectionmenu .vignette .pricemenu {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  border: 1px solid red;
 }
-.section .vignette .pricemenu p {
-  margin: 0 1rem 0.5rem 1rem;
+.sectionmenu .vignette .pricemenu p {
+  margin: 0 1rem 0.5rem 0;
   font-weight: bold;
+}
+.sectionmenu .vignette .validation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  background: #99E2D0;
+  color: white;
+  margin-right: -5rem;
+  border: 1px solid red;
+}
+.sectionmenu .vignette .validation .style {
+  transform: rotate(180deg);
+  font-size: 1.6rem;
 }
 
 .order {
