@@ -116,7 +116,7 @@ a {
 }
 @keyframes validationhover {
   to {
-    transform: translateX(-5rem);
+    margin-right: 0;
   }
 }
 @keyframes validationhoverrotate {
@@ -422,21 +422,17 @@ h2 {
   overflow: hidden;
 }
 .sectionmenu .vignette:hover > .validation {
-  animation: linear 0.5s validationhover;
-  animation-fill-mode: forwards;
-}
-.sectionmenu .vignette:hover > .pricemenu {
-  animation: linear 0.5s validationhover;
+  animation: linear 0.2s validationhover;
   animation-fill-mode: forwards;
 }
 .sectionmenu .vignette:hover .style {
-  animation: linear 0.5s validationhoverrotate;
+  animation: linear 0.1s validationhoverrotate;
   animation-fill-mode: forwards;
+  animation-delay: 0.1s;
 }
 .sectionmenu .vignette .textmenu {
   min-width: 0;
   flex: 1;
-  border: 1px solid red;
 }
 .sectionmenu .vignette .textmenu h3 {
   margin: 0.5rem 0 0.5rem 1rem;
@@ -457,11 +453,9 @@ h2 {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  margin-right: 1rem;
-  border: 1px solid red;
 }
 .sectionmenu .vignette .pricemenu p {
-  margin: 0 1rem 0.5rem 0;
+  margin: 0 1.5rem 0.5rem 0.5rem;
   font-weight: bold;
 }
 .sectionmenu .vignette .validation {
@@ -472,7 +466,6 @@ h2 {
   background: #99E2D0;
   color: white;
   margin-right: -5rem;
-  border: 1px solid red;
 }
 .sectionmenu .vignette .validation .style {
   transform: rotate(180deg);
