@@ -124,6 +124,14 @@ a {
     transform: rotate(0deg);
   }
 }
+@keyframes animationmenu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
 .localization {
   margin: auto;
   display: flex;
@@ -420,6 +428,8 @@ h2 {
   margin: 1rem;
   display: flex;
   overflow: hidden;
+  animation: forwards linear 0.1s animationmenu;
+  opacity: 0;
 }
 .sectionmenu .vignette:hover > .validation {
   animation: linear 0.2s validationhover;
@@ -470,6 +480,30 @@ h2 {
 .sectionmenu .vignette .validation .style {
   transform: rotate(180deg);
   font-size: 1.6rem;
+}
+.sectionmenu .secondstarter {
+  animation-delay: 0.1s;
+}
+.sectionmenu .thirdstarter {
+  animation-delay: 0.2s;
+}
+.sectionmenu .firstdish {
+  animation-delay: 0.3s;
+}
+.sectionmenu .seconddish {
+  animation-delay: 0.4s;
+}
+.sectionmenu .thirddish {
+  animation-delay: 0.5s;
+}
+.sectionmenu .firstdessert {
+  animation-delay: 0.6s;
+}
+.sectionmenu .seconddessert {
+  animation-delay: 0.7s;
+}
+.sectionmenu .thirddessert {
+  animation-delay: 0.8s;
 }
 
 .order {

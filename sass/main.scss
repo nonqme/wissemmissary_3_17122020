@@ -161,6 +161,15 @@ a {
     }
 }
 
+@keyframes animationmenu {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100;
+    }
+}
+
 .localization {
     margin: auto;
     @include flexcenter();
@@ -452,6 +461,8 @@ h2 {
         margin: 1rem;
         display: flex;
         overflow: hidden;
+        animation: forwards linear 0.1s animationmenu;
+        opacity: 0;
         &:hover > .validation{
             animation: linear 0.2s validationhover;
             animation-fill-mode: forwards;
@@ -502,6 +513,30 @@ h2 {
                 font-size: 1.6rem;
             }
         }
+    }
+    .secondstarter {
+        animation-delay: 0.1s;
+    }
+    .thirdstarter {
+        animation-delay: 0.2s;
+    }
+    .firstdish {
+        animation-delay: 0.3s;
+    }
+    .seconddish {
+        animation-delay: 0.4s;
+    }
+    .thirddish {
+        animation-delay: 0.5s;
+    }
+    .firstdessert {
+        animation-delay: 0.6s;
+    }
+    .seconddessert {
+        animation-delay: 0.7s;
+    }
+    .thirddessert {
+        animation-delay: 0.8s;
     }
 }
 
