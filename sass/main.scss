@@ -1,33 +1,33 @@
-body {
-    margin: 0.5rem 0 0 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-.index {
-    animation: textnoscroll 3s linear;
-}
-
 $background:#eaeaea;
 $lightbackground: #f6f6f6;
 $primarycolor: #9356DC;
 $secondarycolor: #FF79DA;
 $tertiary: #99E2D0;
+$animationgradient: linear-gradient(to right, $secondarycolor,$primarycolor, $secondarycolor);
+$btngradient: linear-gradient(174deg, $secondarycolor 10%, $primarycolor 100%);
+$hoverbtngradienteffect: linear-gradient(174deg, lighten($secondarycolor, 8%) 10%, lighten($primarycolor, 8%) 100%);
+
 
 @mixin maxwidth {
     margin: auto;
     max-width: 1440px;
 }
 
-@mixin flexcenter {
+@mixin flexaligncenter {
     display: flex;
-    justify-content: center;
     align-items: center;   
 }
 
+@mixin flexjustifycenter {
+    display: flex;
+    justify-content: center;   
+}
+
 @mixin flexcentercolumn {
-    display:flex;
+    display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
 }
 
 @mixin titrepadding {
@@ -35,61 +35,6 @@ $tertiary: #99E2D0;
     margin:2rem 4rem 0 4rem;
 }
 
-header {
-    @include maxwidth();
-    display: flex;
-    align-items: center;
-}
-
-.arrowiconhide {
-    display: none;
-}
-
-.arrowicon {
-    position: absolute;
-    margin: 1rem;
-    i {
-        color: black;
-    }
-}
-
-.logo {
-    margin: auto;
-    padding: 1rem;
-}
-
-a {
-    text-decoration: none;
-}
-
-.loader {
-    font-family: 'Shrikhand', cursive;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position:fixed;
-    left:0;
-    top:0;
-    right:0;
-    bottom:0;
-    background: $background;
-    opacity:0%;
-    animation: animatedbackground 3s linear;
-    z-index: -10;
-    &__gradient {
-        padding: 0.5rem;
-        font-size: 3rem;
-        color: transparent;
-        -webkit-background-clip: text;
-        background-clip: text;
-        background-image: linear-gradient(to right, $secondarycolor,$primarycolor, $secondarycolor);
-        background-size: 300%;
-        animation: animatedtxt 3s linear;
-        animation-direction: alternate;
-        opacity: 0%;
-    }
-}
 
 @keyframes animatedtxt{
     0%{
@@ -170,9 +115,68 @@ a {
     }
 }
 
+body {
+    margin: 0.5rem 0 0 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bodyanimation {
+    animation: textnoscroll 3s linear;
+    &__loader {
+        font-family: 'Shrikhand', cursive;
+        @include flexcentercolumn();
+        position:fixed;
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+        background: $background;
+        opacity:0%;
+        animation: animatedbackground 3s linear;
+        z-index: -10;
+        &__gradient {
+            padding: 0.5rem;
+            font-size: 3rem;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            background-image: $animationgradient;
+            background-size: 300%;
+            animation: animatedtxt 3s linear;
+            animation-direction: alternate;
+            opacity: 0%;
+        }
+    }
+}
+
+
+.header {
+    @include maxwidth();
+    @include flexaligncenter();
+    &__arrowcontent {
+        position: absolute;
+        margin: 1rem;
+        &__icon {
+            color: black;
+        }
+    }
+    &__arrowcontenthide{
+        display: none;
+    }
+    &__logo {
+        margin: auto;
+        padding: 1rem;
+    }
+}
+
 .localization {
     margin: auto;
-    @include flexcenter();
+    @include flexaligncenter();
+    justify-content: center;
     background: $background;
     box-shadow:inset 0px 5px 9px -6px gray;
     &__icon {
@@ -182,23 +186,20 @@ a {
 
 .section1 {
     background: $lightbackground;
-    margin: auto;
     @include flexcentercolumn();
-    a {
-        color: white;
-    }
-    h1{
-        @include titrepadding();
+    &__title{
+        margin:2rem 4rem 0 4rem;
         font-weight: bold;
     }
-    p{
+    &__txt{
         text-align: center;
-        margin: 1rem 2rem ;
+        margin: 1rem 2rem;
+        
     }
     &__btn{
         border-radius: 5rem;
         border: none;
-        background: linear-gradient(174deg, $secondarycolor 10%, $primarycolor 100%);
+        background: $btngradient;
         padding: 1rem 1.5rem;
         color: white;
         margin: 0.5rem 1rem 2rem 1rem;
@@ -207,7 +208,7 @@ a {
             outline: none;
         }
         &:hover {
-            background: linear-gradient(174deg, lighten($secondarycolor, 8%) 10%, lighten($primarycolor, 8%) 100%);
+            background: $hoverbtngradienteffect;
             box-shadow: 0px 5px 5px -2px gray;
         }
     }
@@ -233,8 +234,7 @@ a {
             border-radius: 1.3rem;
             margin: 1rem;
             height: 5rem;
-            display: flex;
-            align-items: center;
+            @include flexaligncenter();
             box-shadow: 0px 5px 9px -6px gray;
             &:hover {
                 background-color: lighten(#FF79DA,20%);
@@ -249,16 +249,14 @@ a {
                 font-size: .7rem;
             }
             a {
-                display: flex;
-                align-items: center;
+                @include flexaligncenter();
                 width: 100%;
                 height: 100%;
-                
+                color: black;                
             }
         }
         &__txticon {
-            display: flex;
-            align-items: center;
+            @include flexaligncenter();
             flex-basis: 100%;
             height: 100%;
             &:hover > .aside__list__icon{
@@ -313,9 +311,8 @@ a {
             object-fit: cover;
         }  
         &__txticon {
-            display: flex;
+            @include flexaligncenter();
             justify-content: space-between;
-            align-items: center;
             align-content: center;
             margin: 1rem;
         }
@@ -347,7 +344,7 @@ a {
             }
             &__iconfull {
                 position: relative;
-                background-image: linear-gradient(to right, $primarycolor, $secondarycolor);
+                background-image: $animationgradient;
                 background-clip: text;
                 -webkit-background-clip: text;
                 color: transparent;
@@ -366,30 +363,32 @@ a {
     &__content {
         @include maxwidth();
         padding: 2rem 0 2rem 1rem;
-    }
-    h4 {
-        margin: 0 0 2rem 0;
-        font-family: 'Shrikhand', cursive;
-        font-size:1.3rem;
-        font-weight: 100;
-    }
-    ul {
-        padding: 0;
-        list-style: none;
-        margin: 0;
-    }
-    li {
-        margin: 1rem 0;
-        display:flex;
-    }
-    &__texticon__icon {
-        margin: 0 0.5rem 0 0;
-    }
-    &__texticon__txt {
-        margin: 0;
-    }
-    a {
-        color: white;
+        &__title{
+            margin: 0 0 2rem 0;
+            font-family: 'Shrikhand', cursive;
+            font-size:1.3rem;
+            font-weight: 100;
+        }
+        &__ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+            &__li {
+                margin: 1rem 0;
+                display: flex;
+            }
+            &__texticon__icon {
+                margin: 0 0.5rem 0 0;
+                cursor:pointer;
+            }
+            &__texticon__txt {
+                cursor:pointer;
+                margin: 0;
+            }
+            &__mail {
+                color: white;
+            }
+        }
     }
 }
 
@@ -401,7 +400,8 @@ a {
         &__img {
             width: 100%;
             object-fit: cover;
-            max-height: 20rem;
+            max-height: 30rem;
+            box-shadow: inset 0px 5px 9px -6px grey;
         }
     }
     &__content {
@@ -412,11 +412,10 @@ a {
         margin-top: -5rem;
         &__titleandicon {
             @include maxwidth();
-            display: flex;
+            @include flexaligncenter();
             justify-content: space-between;
-            align-items: center;
             font-size: 1.8rem;
-            h1 {
+            &__title {
                 margin: 1rem 1rem 0 1rem;
                 font-weight: normal;
                 font-size: 1.7rem;
@@ -438,7 +437,7 @@ a {
             }
             &__iconfull {
                 position: relative;
-                background-image: linear-gradient(to right, $primarycolor, $secondarycolor);
+                background-image: $animationgradient;
                 background-clip: text;
                 -webkit-background-clip: text;
                 color: transparent;
@@ -452,18 +451,18 @@ a {
 
 .sectionmenu {
     @include maxwidth();
-    &__title{
+    &__titlecontent{
         border-bottom: 3px solid $tertiary;
         width: 3rem;
         margin: 2rem 1rem 0 1rem;
         padding-bottom: 0.4rem;
+        &__title {
+            font-size: 1.1rem;
+            font-weight: normal;
+            margin: 0;
+        }
     }
-    h2 {
-        font-size: 1.1rem;
-        font-weight: normal;
-        margin: 0;
-    }
-    .vignette {
+    &__vignette {
         background-color: white;
         border-radius: 0.8rem;
         margin: 1rem;
@@ -472,26 +471,26 @@ a {
         animation: forwards linear 0.1s animationmenu;
         opacity: 0;
         cursor: pointer;
-        &:hover > .validation{
+        &:hover > .sectionmenu__validation{
             animation: linear 0.2s validationhover;
             animation-fill-mode: forwards;
         }
-        &:hover .style{
+        &:hover .sectionmenu__validation__icon{
             animation: linear 0.1s validationhoverrotate;
             animation-fill-mode: forwards;
             animation-delay: 0.2s;
         }
-        .textmenu {
+        &__textmenu {
             min-width: 0;
             flex: 1;
-            h3{
+            &__title{
                 margin: 0.5rem 0 0.5rem 1rem;
                 font-size: 1rem;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
-            p{
+            &__txt{
                 margin: 0 0 0.5rem 1rem;
                 font-weight: 400;
                 font-size: 0.9rem;
@@ -500,29 +499,29 @@ a {
                 text-overflow: ellipsis;
             }
         }
-        .pricemenu {
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            p {
-                margin: 0 1.5rem 0.5rem 0.5rem;
-                font-weight: bold;
-            }
-        }
-        .validation {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 4rem;
-            background: $tertiary;
-            color: white;
-            margin-right: -5rem;
-            .style {
-                transform: rotate(180deg);
-                font-size: 1.6rem;
-            }
+    }
+    &__pricemenu {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        &__txt {
+            margin: 0 1.5rem 0.5rem 0.5rem;
+            font-weight: bold;
         }
     }
+    &__validation {
+        @include flexaligncenter();
+        justify-content: center;
+        width: 4rem;
+        background: $tertiary;
+        color: white;
+        margin-right: -5rem;
+        &__icon {
+            transform: rotate(180deg);
+            font-size: 1.6rem;
+        }
+    }
+}   
     .secondstarter {
         animation-delay: 0.1s;
     }
@@ -547,20 +546,20 @@ a {
     .thirddessert {
         animation-delay: 0.8s;
     }
-}
+
 
 .order {
-    display: flex;
-    justify-content: center;
+    @include flexjustifycenter();
+    align-items: center;
     padding: 3rem 0 3.5rem 0;
     &__btn{
         border-radius: 5rem;
         border: none;
-        background: linear-gradient(174deg, $secondarycolor 10%, $primarycolor 100%);
+        background: $btngradient;
         padding: 1rem 1.5rem;
         color: white;
         &:hover {
-            background: linear-gradient(174deg, lighten($secondarycolor, 8%) 10%, lighten($primarycolor, 8%) 100%);
+            background: $hoverbtngradienteffect;
             box-shadow: 0px 5px 5px -2px gray;
         }
     }
@@ -568,8 +567,13 @@ a {
 
 @media only screen and (min-width : 1220px){
     .section2__content--responsive{
+        @include flexjustifycenter();
+    }
+    .aside__list{
         display: flex;
-        justify-content: center;
+        &--style{
+            flex-basis: 33%;
+        }
     }
     }
 

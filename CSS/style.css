@@ -1,69 +1,3 @@
-body {
-  margin: 0.5rem 0 0 0;
-  font-family: "Roboto", sans-serif;
-}
-
-.index {
-  animation: textnoscroll 3s linear;
-}
-
-header {
-  margin: auto;
-  max-width: 1440px;
-  display: flex;
-  align-items: center;
-}
-
-.arrowiconhide {
-  display: none;
-}
-
-.arrowicon {
-  position: absolute;
-  margin: 1rem;
-}
-.arrowicon i {
-  color: black;
-}
-
-.logo {
-  margin: auto;
-  padding: 1rem;
-}
-
-a {
-  text-decoration: none;
-}
-
-.loader {
-  font-family: "Shrikhand", cursive;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: #eaeaea;
-  opacity: 0%;
-  animation: animatedbackground 3s linear;
-  z-index: -10;
-}
-.loader__gradient {
-  padding: 0.5rem;
-  font-size: 3rem;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: linear-gradient(to right, #FF79DA, #9356DC, #FF79DA);
-  background-size: 300%;
-  animation: animatedtxt 3s linear;
-  animation-direction: alternate;
-  opacity: 0%;
-}
-
 @keyframes animatedtxt {
   0% {
     opacity: 100%;
@@ -132,11 +66,73 @@ a {
     opacity: 100;
   }
 }
+body {
+  margin: 0.5rem 0 0 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bodyanimation {
+  animation: textnoscroll 3s linear;
+}
+.bodyanimation__loader {
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #eaeaea;
+  opacity: 0%;
+  animation: animatedbackground 3s linear;
+  z-index: -10;
+}
+.bodyanimation__loader__gradient {
+  padding: 0.5rem;
+  font-size: 3rem;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to right, #FF79DA, #9356DC, #FF79DA);
+  background-size: 300%;
+  animation: animatedtxt 3s linear;
+  animation-direction: alternate;
+  opacity: 0%;
+}
+
+.header {
+  margin: auto;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+}
+.header__arrowcontent {
+  position: absolute;
+  margin: 1rem;
+}
+.header__arrowcontent__icon {
+  color: black;
+}
+.header__arrowcontenthide {
+  display: none;
+}
+.header__logo {
+  margin: auto;
+  padding: 1rem;
+}
+
 .localization {
   margin: auto;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   background: #eaeaea;
   box-shadow: inset 0px 5px 9px -6px gray;
 }
@@ -146,20 +142,16 @@ a {
 
 .section1 {
   background: #f6f6f6;
-  margin: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
 }
-.section1 a {
-  color: white;
-}
-.section1 h1 {
-  text-align: center;
+.section1__title {
   margin: 2rem 4rem 0 4rem;
   font-weight: bold;
 }
-.section1 p {
+.section1__txt {
   text-align: center;
   margin: 1rem 2rem;
 }
@@ -224,6 +216,7 @@ a {
   align-items: center;
   width: 100%;
   height: 100%;
+  color: black;
 }
 .aside__list__txticon {
   display: flex;
@@ -284,8 +277,8 @@ a {
 }
 .section2__vignette__txticon {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   align-content: center;
   margin: 1rem;
 }
@@ -318,7 +311,7 @@ a {
 }
 .section2__vignette__iconblock__iconfull {
   position: relative;
-  background-image: linear-gradient(to right, #9356DC, #FF79DA);
+  background-image: linear-gradient(to right, #FF79DA, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -336,28 +329,30 @@ a {
   max-width: 1440px;
   padding: 2rem 0 2rem 1rem;
 }
-.footer h4 {
+.footer__content__title {
   margin: 0 0 2rem 0;
   font-family: "Shrikhand", cursive;
   font-size: 1.3rem;
   font-weight: 100;
 }
-.footer ul {
+.footer__content__ul {
   padding: 0;
   list-style: none;
   margin: 0;
 }
-.footer li {
+.footer__content__ul__li {
   margin: 1rem 0;
   display: flex;
 }
-.footer__texticon__icon {
+.footer__content__ul__texticon__icon {
   margin: 0 0.5rem 0 0;
+  cursor: pointer;
 }
-.footer__texticon__txt {
+.footer__content__ul__texticon__txt {
+  cursor: pointer;
   margin: 0;
 }
-.footer a {
+.footer__content__ul__mail {
   color: white;
 }
 
@@ -368,7 +363,8 @@ a {
 .main__imgblock__img {
   width: 100%;
   object-fit: cover;
-  max-height: 20rem;
+  max-height: 30rem;
+  box-shadow: inset 0px 5px 9px -6px grey;
 }
 .main__content {
   background-color: #f6f6f6;
@@ -381,11 +377,11 @@ a {
   margin: auto;
   max-width: 1440px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   font-size: 1.8rem;
 }
-.main__content__titleandicon h1 {
+.main__content__titleandicon__title {
   margin: 1rem 1rem 0 1rem;
   font-weight: normal;
   font-size: 1.7rem;
@@ -407,7 +403,7 @@ a {
 }
 .main__content__titleandicon__iconfull {
   position: relative;
-  background-image: linear-gradient(to right, #9356DC, #FF79DA);
+  background-image: linear-gradient(to right, #FF79DA, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -419,18 +415,18 @@ a {
   margin: auto;
   max-width: 1440px;
 }
-.sectionmenu__title {
+.sectionmenu__titlecontent {
   border-bottom: 3px solid #99E2D0;
   width: 3rem;
   margin: 2rem 1rem 0 1rem;
   padding-bottom: 0.4rem;
 }
-.sectionmenu h2 {
+.sectionmenu__titlecontent__title {
   font-size: 1.1rem;
   font-weight: normal;
   margin: 0;
 }
-.sectionmenu .vignette {
+.sectionmenu__vignette {
   background-color: white;
   border-radius: 0.8rem;
   margin: 1rem;
@@ -440,27 +436,27 @@ a {
   opacity: 0;
   cursor: pointer;
 }
-.sectionmenu .vignette:hover > .validation {
+.sectionmenu__vignette:hover > .sectionmenu__validation {
   animation: linear 0.2s validationhover;
   animation-fill-mode: forwards;
 }
-.sectionmenu .vignette:hover .style {
+.sectionmenu__vignette:hover .sectionmenu__validation__icon {
   animation: linear 0.1s validationhoverrotate;
   animation-fill-mode: forwards;
   animation-delay: 0.2s;
 }
-.sectionmenu .vignette .textmenu {
+.sectionmenu__vignette__textmenu {
   min-width: 0;
   flex: 1;
 }
-.sectionmenu .vignette .textmenu h3 {
+.sectionmenu__vignette__textmenu__title {
   margin: 0.5rem 0 0.5rem 1rem;
   font-size: 1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.sectionmenu .vignette .textmenu p {
+.sectionmenu__vignette__textmenu__txt {
   margin: 0 0 0.5rem 1rem;
   font-weight: 400;
   font-size: 0.9rem;
@@ -468,56 +464,65 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.sectionmenu .vignette .pricemenu {
+.sectionmenu__pricemenu {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
 }
-.sectionmenu .vignette .pricemenu p {
+.sectionmenu__pricemenu__txt {
   margin: 0 1.5rem 0.5rem 0.5rem;
   font-weight: bold;
 }
-.sectionmenu .vignette .validation {
+.sectionmenu__validation {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 4rem;
   background: #99E2D0;
   color: white;
   margin-right: -5rem;
 }
-.sectionmenu .vignette .validation .style {
+.sectionmenu__validation__icon {
   transform: rotate(180deg);
   font-size: 1.6rem;
 }
-.sectionmenu .secondstarter {
+
+.secondstarter {
   animation-delay: 0.1s;
 }
-.sectionmenu .thirdstarter {
+
+.thirdstarter {
   animation-delay: 0.2s;
 }
-.sectionmenu .firstdish {
+
+.firstdish {
   animation-delay: 0.3s;
 }
-.sectionmenu .seconddish {
+
+.seconddish {
   animation-delay: 0.4s;
 }
-.sectionmenu .thirddish {
+
+.thirddish {
   animation-delay: 0.5s;
 }
-.sectionmenu .firstdessert {
+
+.firstdessert {
   animation-delay: 0.6s;
 }
-.sectionmenu .seconddessert {
+
+.seconddessert {
   animation-delay: 0.7s;
 }
-.sectionmenu .thirddessert {
+
+.thirddessert {
   animation-delay: 0.8s;
 }
 
 .order {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 3rem 0 3.5rem 0;
 }
 .order__btn {
@@ -536,6 +541,13 @@ a {
   .section2__content--responsive {
     display: flex;
     justify-content: center;
+  }
+
+  .aside__list {
+    display: flex;
+  }
+  .aside__list--style {
+    flex-basis: 33%;
   }
 }
 
