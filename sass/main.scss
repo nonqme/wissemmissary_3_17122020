@@ -465,6 +465,7 @@ a {
         overflow: hidden;
         animation: forwards linear 0.1s animationmenu;
         opacity: 0;
+        cursor: pointer;
         &:hover > .validation{
             animation: linear 0.2s validationhover;
             animation-fill-mode: forwards;
@@ -472,7 +473,7 @@ a {
         &:hover .style{
             animation: linear 0.1s validationhoverrotate;
             animation-fill-mode: forwards;
-            animation-delay: 0.1s;
+            animation-delay: 0.2s;
         }
         .textmenu {
             min-width: 0;
