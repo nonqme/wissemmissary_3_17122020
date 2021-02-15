@@ -311,7 +311,7 @@ a {
 }
 .section2__vignette__iconblock__iconfull {
   position: relative;
-  background-image: linear-gradient(to right, #FF79DA, #9356DC, #FF79DA);
+  background-image: linear-gradient(to right, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;

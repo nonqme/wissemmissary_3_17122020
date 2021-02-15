@@ -4,6 +4,7 @@ $primarycolor: #9356DC;
 $secondarycolor: #FF79DA;
 $tertiary: #99E2D0;
 $animationgradient: linear-gradient(to right, $secondarycolor,$primarycolor, $secondarycolor);
+$animationgradientheart: linear-gradient(to right, $primarycolor, $secondarycolor);
 $btngradient: linear-gradient(174deg, $secondarycolor 10%, $primarycolor 100%);
 $hoverbtngradienteffect: linear-gradient(174deg, lighten($secondarycolor, 8%) 10%, lighten($primarycolor, 8%) 100%);
 
@@ -344,7 +345,7 @@ a {
             }
             &__iconfull {
                 position: relative;
-                background-image: $animationgradient;
+                background-image: $animationgradientheart;
                 background-clip: text;
                 -webkit-background-clip: text;
                 color: transparent;
