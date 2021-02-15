@@ -140,22 +140,22 @@ a {
   margin: 1rem;
 }
 
-.section1 {
+.sectionheader {
   background: #f6f6f6;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 }
-.section1__title {
+.sectionheader__title {
   margin: 2rem 4rem 0 4rem;
   font-weight: bold;
 }
-.section1__txt {
+.sectionheader__txt {
   text-align: center;
   margin: 1rem 2rem;
 }
-.section1__btn {
+.sectionheader__btn {
   border-radius: 5rem;
   border: none;
   background: linear-gradient(174deg, #FF79DA 10%, #9356DC 100%);
@@ -164,32 +164,32 @@ a {
   margin: 0.5rem 1rem 2rem 1rem;
   box-shadow: 0px 5px 9px -6px gray;
 }
-.section1__btn:focus {
+.sectionheader__btn:focus {
   outline: none;
 }
-.section1__btn:hover {
+.sectionheader__btn:hover {
   background: linear-gradient(174deg, #ffa2e5 10%, #a978e3 100%);
   box-shadow: 0px 5px 5px -2px gray;
 }
 
-.aside {
+.asidetuto {
   margin: auto;
   max-width: 1440px;
   padding: 1rem 0 1rem 0;
 }
-.aside__title {
+.asidetuto__title {
   margin: 2rem 1rem 0 1rem;
 }
-.aside a {
+.asidetuto a {
   color: black;
 }
-.aside__list {
+.asidetuto__list {
   padding: 0;
   margin: 0 1rem 0 1rem;
   list-style: none;
   counter-reset: circle-counter;
 }
-.aside__list--style {
+.asidetuto__list--style {
   counter-increment: circle-counter;
   background-color: #f6f6f6;
   border-radius: 1.3rem;
@@ -199,10 +199,10 @@ a {
   align-items: center;
   box-shadow: 0px 5px 9px -6px gray;
 }
-.aside__list--style:hover {
+.asidetuto__list--style:hover {
   background-color: #ffdff6;
 }
-.aside__list--style:before {
+.asidetuto__list--style:before {
   content: counter(circle-counter);
   background-color: #9356DC;
   border-radius: 50%;
@@ -211,46 +211,46 @@ a {
   color: white;
   font-size: 0.7rem;
 }
-.aside__list--style a {
+.asidetuto__list--style a {
   display: flex;
   align-items: center;
   width: 100%;
   height: 100%;
   color: black;
 }
-.aside__list__txticon {
+.asidetuto__list__txticon {
   display: flex;
   align-items: center;
   flex-basis: 100%;
   height: 100%;
 }
-.aside__list__txticon:hover > .aside__list__icon {
+.asidetuto__list__txticon:hover > .aside__list__icon {
   color: #9356DC;
 }
-.aside__list__icon {
+.asidetuto__list__icon {
   margin: 0 1.5rem 0 1.5rem;
   font-size: 1.3rem;
   color: gray;
 }
-.aside__list__text {
+.asidetuto__list__text {
   font-weight: bold;
 }
 
-.section2 {
+.sectionrestaurant {
   padding: 1rem 0 1rem 0;
   background: #f6f6f6;
 }
-.section2 a {
+.sectionrestaurant a {
   color: black;
 }
-.section2__content {
+.sectionrestaurant__content {
   margin: auto;
   max-width: 1440px;
 }
-.section2__content__title {
+.sectionrestaurant__content__title {
   margin: 2rem 1rem 0 1rem;
 }
-.section2__vignette {
+.sectionrestaurant__vignette {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -260,7 +260,7 @@ a {
   cursor: pointer;
   margin: 1rem;
 }
-.section2__vignette__new {
+.sectionrestaurant__vignette__new {
   position: absolute;
   right: 0.75rem;
   top: 1rem;
@@ -268,48 +268,48 @@ a {
   background-color: #99e2d0;
   padding: 0.5rem;
 }
-.section2__vignette__img {
+.sectionrestaurant__vignette__img {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   width: 100%;
   height: 10rem;
   object-fit: cover;
 }
-.section2__vignette__txticon {
+.sectionrestaurant__vignette__txticon {
   display: flex;
   align-items: center;
   justify-content: space-between;
   align-content: center;
   margin: 1rem;
 }
-.section2__vignette__txtcontent {
+.sectionrestaurant__vignette__txtcontent {
   flex-basis: 80%;
 }
-.section2__vignette__txt {
+.sectionrestaurant__vignette__txt {
   flex-basis: 90%;
 }
-.section2__vignette__txt h3 {
+.sectionrestaurant__vignette__txt h3 {
   margin: 0;
 }
-.section2__vignette__txt p {
+.sectionrestaurant__vignette__txt p {
   margin: 0;
 }
-.section2__vignette__iconblock {
+.sectionrestaurant__vignette__iconblock {
   display: flex;
   justify-content: flex-end;
 }
-.section2__vignette__iconblock:hover > .section2__vignette__iconblock__icon {
+.sectionrestaurant__vignette__iconblock:hover > .sectionrestaurant__vignette__iconblock__icon {
   opacity: 0%;
 }
-.section2__vignette__iconblock:hover > .section2__vignette__iconblock__iconfull {
+.sectionrestaurant__vignette__iconblock:hover > .sectionrestaurant__vignette__iconblock__iconfull {
   opacity: 100%;
   animation: animatedheart 0.5s linear;
 }
-.section2__vignette__iconblock__icon {
+.sectionrestaurant__vignette__iconblock__icon {
   position: absolute;
   font-size: 1.5rem;
 }
-.section2__vignette__iconblock__iconfull {
+.sectionrestaurant__vignette__iconblock__iconfull {
   position: relative;
   background-image: linear-gradient(to right, #9356DC, #FF79DA);
   background-clip: text;
@@ -538,7 +538,7 @@ a {
 }
 
 @media only screen and (min-width: 1220px) {
-  .section2__content--responsive {
+  .sectionrestaurant__content--responsive {
     display: flex;
     justify-content: center;
   }

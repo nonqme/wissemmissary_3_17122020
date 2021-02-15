@@ -3,6 +3,8 @@ $lightbackground: #f6f6f6;
 $primarycolor: #9356DC;
 $secondarycolor: #FF79DA;
 $tertiary: #99E2D0;
+$primaryfont: 'Shrikhand', cursive;
+$secondaryfont: 'Roboto', sans-serif;
 $animationgradient: linear-gradient(to right, $secondarycolor,$primarycolor, $secondarycolor);
 $animationgradientheart: linear-gradient(to right, $primarycolor, $secondarycolor);
 $btngradient: linear-gradient(174deg, $secondarycolor 10%, $primarycolor 100%);
@@ -118,7 +120,7 @@ $hoverbtngradienteffect: linear-gradient(174deg, lighten($secondarycolor, 8%) 10
 
 body {
     margin: 0.5rem 0 0 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: $secondaryfont
 }
 
 a {
@@ -128,7 +130,7 @@ a {
 .bodyanimation {
     animation: textnoscroll 3s linear;
     &__loader {
-        font-family: 'Shrikhand', cursive;
+        font-family: $primaryfont;
         @include flexcentercolumn();
         position:fixed;
         left:0;
@@ -185,7 +187,7 @@ a {
     }
 }
 
-.section1 {
+.sectionheader {
     background: $lightbackground;
     @include flexcentercolumn();
     &__title{
@@ -215,7 +217,7 @@ a {
     }
 }
 
-.aside {
+.asidetuto {
     @include maxwidth();
     padding: 1rem 0 1rem 0;
     &__title{
@@ -275,7 +277,7 @@ a {
     }
 }
 
-.section2 {
+.sectionrestaurant {
     padding: 1rem 0 1rem 0;
     background: $lightbackground;
     a {
@@ -332,10 +334,10 @@ a {
         &__iconblock {
             display: flex;
             justify-content: flex-end;
-            &:hover > .section2__vignette__iconblock__icon {
+            &:hover > .sectionrestaurant__vignette__iconblock__icon {
                 opacity: 0%;
             }
-            &:hover > .section2__vignette__iconblock__iconfull {
+            &:hover > .sectionrestaurant__vignette__iconblock__iconfull {
                 opacity: 100%;
                 animation: animatedheart .5s linear;
             }
@@ -366,7 +368,7 @@ a {
         padding: 2rem 0 2rem 1rem;
         &__title{
             margin: 0 0 2rem 0;
-            font-family: 'Shrikhand', cursive;
+            font-family: $primaryfont;
             font-size:1.3rem;
             font-weight: 100;
         }
@@ -420,7 +422,7 @@ a {
                 margin: 1rem 1rem 0 1rem;
                 font-weight: normal;
                 font-size: 1.7rem;
-                font-family: 'Shrikhand', cursive;
+                font-family: $primaryfont;
             }
             &__iconblock {
                 margin-right: 2rem;
@@ -567,7 +569,7 @@ a {
 }
 
 @media only screen and (min-width : 1220px){
-    .section2__content--responsive{
+    .sectionrestaurant__content--responsive{
         @include flexjustifycenter();
     }
     .aside__list{
