@@ -213,10 +213,6 @@ a {
     }
 }
 
-h2 {
-    margin: 2rem 1rem 0 1rem;
-}
-
 .aside {
     @include maxwidth();
     padding: 1rem 0 1rem 0;
@@ -415,7 +411,7 @@ h2 {
             align-items: center;
             font-size: 1.8rem;
             h1 {
-                margin: 1rem;
+                margin: 1rem 1rem 0 1rem;
                 font-weight: normal;
                 font-size: 1.7rem;
                 font-family: 'Shrikhand', cursive;
@@ -450,10 +446,16 @@ h2 {
 
 .sectionmenu {
     @include maxwidth();
+    &__tittle{
+        border-bottom: 3px solid $tertiary;
+        width: 3rem;
+        margin: 2rem 1rem 0 1rem;
+        padding-bottom: 0.4rem;
+    }
     h2 {
         font-size: 1.1rem;
         font-weight: normal;
-        margin: 2rem 1rem 0 1rem;
+        margin: 0;
     }
     .vignette {
         background-color: white;
@@ -550,6 +552,10 @@ h2 {
         background: linear-gradient(174deg, $secondarycolor 10%, $primarycolor 100%);
         padding: 1rem 1.5rem;
         color: white;
+        &:hover {
+            background: linear-gradient(174deg, lighten($secondarycolor, 8%) 10%, lighten($primarycolor, 8%) 100%);
+            box-shadow: 0px 5px 5px -2px gray;
+        }
     }
 }
 

@@ -180,10 +180,6 @@ a {
   box-shadow: 0px 5px 5px -2px gray;
 }
 
-h2 {
-  margin: 2rem 1rem 0 1rem;
-}
-
 .aside {
   margin: auto;
   max-width: 1440px;
@@ -384,7 +380,7 @@ h2 {
   font-size: 1.8rem;
 }
 .main__content__titleandicon h1 {
-  margin: 1rem;
+  margin: 1rem 1rem 0 1rem;
   font-weight: normal;
   font-size: 1.7rem;
   font-family: "Shrikhand", cursive;
@@ -417,10 +413,16 @@ h2 {
   margin: auto;
   max-width: 1440px;
 }
+.sectionmenu__tittle {
+  border-bottom: 3px solid #99E2D0;
+  width: 3rem;
+  margin: 2rem 1rem 0 1rem;
+  padding-bottom: 0.4rem;
+}
 .sectionmenu h2 {
   font-size: 1.1rem;
   font-weight: normal;
-  margin: 2rem 1rem 0 1rem;
+  margin: 0;
 }
 .sectionmenu .vignette {
   background-color: white;
@@ -517,6 +519,10 @@ h2 {
   background: linear-gradient(174deg, #FF79DA 10%, #9356DC 100%);
   padding: 1rem 1.5rem;
   color: white;
+}
+.order__btn:hover {
+  background: linear-gradient(174deg, #ffa2e5 10%, #a978e3 100%);
+  box-shadow: 0px 5px 5px -2px gray;
 }
 
 /*# sourceMappingURL=style.css.map */
