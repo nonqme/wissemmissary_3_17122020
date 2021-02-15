@@ -63,7 +63,7 @@
     opacity: 0;
   }
   to {
-    opacity: 100;
+    opacity: 100%;
   }
 }
 body {
@@ -403,7 +403,7 @@ a {
 }
 .main__content__titleandicon__iconfull {
   position: relative;
-  background-image: linear-gradient(to right, #FF79DA, #9356DC, #FF79DA);
+  background-image: linear-gradient(to right, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;

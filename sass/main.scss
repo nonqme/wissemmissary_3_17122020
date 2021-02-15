@@ -114,13 +114,13 @@ $hoverbtngradienteffect: linear-gradient(174deg, lighten($secondarycolor, 8%) 10
         opacity: 0;
     }
     to{
-        opacity: 100;
+        opacity: 100%;
     }
 }
 
 body {
     margin: 0.5rem 0 0 0;
-    font-family: $secondaryfont
+    font-family: $secondaryfont;
 }
 
 a {
@@ -440,7 +440,7 @@ a {
             }
             &__iconfull {
                 position: relative;
-                background-image: $animationgradient;
+                background-image: $animationgradientheart;
                 background-clip: text;
                 -webkit-background-clip: text;
                 color: transparent;
