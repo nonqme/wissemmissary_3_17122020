@@ -259,6 +259,7 @@ a {
   max-height: 100%;
   cursor: pointer;
   margin: 1rem;
+  flex-basis: 100%;
 }
 .sectionrestaurant__vignette__new {
   position: absolute;
