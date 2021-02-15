@@ -216,6 +216,9 @@ a {
 .aside {
     @include maxwidth();
     padding: 1rem 0 1rem 0;
+    &__title{
+        margin: 2rem 1rem 0 1rem;
+    }
     a {
         color: black;
     }
@@ -281,6 +284,9 @@ a {
     }
     &__content {
         @include maxwidth();
+        &__title{
+            margin: 2rem 1rem 0 1rem;
+        }
     }
     &__vignette {
         position: relative;
@@ -446,7 +452,7 @@ a {
 
 .sectionmenu {
     @include maxwidth();
-    &__tittle{
+    &__title{
         border-bottom: 3px solid $tertiary;
         width: 3rem;
         margin: 2rem 1rem 0 1rem;
@@ -546,7 +552,7 @@ a {
 .order {
     display: flex;
     justify-content: center;
-    padding-bottom: 3rem;
+    padding: 3rem 0 3.5rem 0;
     &__btn{
         border-radius: 5rem;
         border: none;
@@ -560,6 +566,12 @@ a {
     }
 }
 
+@media only screen and (min-width : 1220px){
+    .section2__content--responsive{
+        display: flex;
+        justify-content: center;
+    }
+    }
 
 
 

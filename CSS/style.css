@@ -185,6 +185,9 @@ a {
   max-width: 1440px;
   padding: 1rem 0 1rem 0;
 }
+.aside__title {
+  margin: 2rem 1rem 0 1rem;
+}
 .aside a {
   color: black;
 }
@@ -250,6 +253,9 @@ a {
 .section2__content {
   margin: auto;
   max-width: 1440px;
+}
+.section2__content__title {
+  margin: 2rem 1rem 0 1rem;
 }
 .section2__vignette {
   position: relative;
@@ -413,7 +419,7 @@ a {
   margin: auto;
   max-width: 1440px;
 }
-.sectionmenu__tittle {
+.sectionmenu__title {
   border-bottom: 3px solid #99E2D0;
   width: 3rem;
   margin: 2rem 1rem 0 1rem;
@@ -512,7 +518,7 @@ a {
 .order {
   display: flex;
   justify-content: center;
-  padding-bottom: 3rem;
+  padding: 3rem 0 3.5rem 0;
 }
 .order__btn {
   border-radius: 5rem;
@@ -524,6 +530,13 @@ a {
 .order__btn:hover {
   background: linear-gradient(174deg, #ffa2e5 10%, #a978e3 100%);
   box-shadow: 0px 5px 5px -2px gray;
+}
+
+@media only screen and (min-width: 1220px) {
+  .section2__content--responsive {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
