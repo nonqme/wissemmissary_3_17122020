@@ -572,10 +572,10 @@ a {
     .sectionrestaurant__content--responsive{
         @include flexjustifycenter();
     }
-    .aside__list{
+    .asidetuto__list{
         display: flex;
         &--style{
-            flex-basis: 33%;
+            flex-basis: 100%;
         }
     }
     }

@@ -543,11 +543,11 @@ a {
     justify-content: center;
   }
 
-  .aside__list {
+  .asidetuto__list {
     display: flex;
   }
-  .aside__list--style {
-    flex-basis: 33%;
+  .asidetuto__list--style {
+    flex-basis: 100%;
   }
 }
 
