@@ -150,6 +150,7 @@ a {
 .sectionheader__title {
   margin: 2rem 4rem 0 4rem;
   font-weight: bold;
+  text-align: center;
 }
 .sectionheader__txt {
   text-align: center;
