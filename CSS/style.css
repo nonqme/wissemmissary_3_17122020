@@ -365,7 +365,7 @@ a {
 .main__imgblock__img {
   width: 100%;
   object-fit: cover;
-  max-height: 30rem;
+  height: 20rem;
   box-shadow: inset 0px 5px 9px -6px grey;
 }
 .main__content {
@@ -550,6 +550,10 @@ a {
   }
   .asidetuto__list--style {
     flex-basis: 100%;
+  }
+
+  .main__imgblock__img {
+    height: 30rem;
   }
 }
 
